@@ -1,4 +1,4 @@
-const BASE_URL = "http://10.124.243.174:5000";
+const BASE_URL = "https://quiz-platform-pjou.onrender.com/";
 
 // 🔐 AUTH
 export const loginUser = async (data) => {
