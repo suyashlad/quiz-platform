@@ -1,6 +1,6 @@
 import { useState } from "react";
 import {
-  uploadQuestions,
+  uploadExcel,
   getQuestions,
   getResults,
   getUsers,
@@ -32,14 +32,19 @@ function Admin() {
   };
 
   const uploadFile = async () => {
-    if (!file) return alert("Select file");
+  if (!file) {
+    alert("Select file first");
+    return;
+  }
 
-    const formData = new FormData();
-    formData.append("file", file);
-
-    const data = await uploadQuestions(formData);
+  try {
+    const data = await uploadExcel(file);
     alert(data.message);
-  };
+  } catch (err) {
+    console.error(err);
+    alert("Upload failed");
+  }
+};
 
   // 📊 Load questions
   const loadQuestions = async () => {
