@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f7fb;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  padding: 15px 20px;
+  margin-top: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+input[type="file"] {
+  margin-top: 10px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.score {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #2e7d32;
+}
