@@ -27,11 +27,15 @@ export const submitQuiz = async (data) => {
 };
 
 // 📂 UPLOAD
-export const uploadQuestions = async (formData) => {
+export const uploadExcel = async (file) => {
+  const formData = new FormData();
+  formData.append("file", file);
+
   const res = await fetch(`${BASE_URL}/upload`, {
     method: "POST",
     body: formData,
   });
+
   return res.json();
 };
 
