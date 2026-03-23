@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_cors import CORS
-
+import os
 # Route imports
 from routes.upload import upload_bp
 from routes.questions import questions_bp
@@ -89,4 +89,4 @@ def home():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)), debug=True)
